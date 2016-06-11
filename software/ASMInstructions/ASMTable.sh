@@ -43,6 +43,8 @@ _pushr;		AF;		0;		Push all registers in the Stack
 
 _popr;		B0;		0; 		Pop all registers from stack
 
+_call;		B1;		4;		Call sub routine
+
 .RA;		C1;				Register RA
 
 .RB;		C2;				Register RB

@@ -316,3 +316,63 @@ exec test
 jasm test.asm
 exec test
 exit
+jasm test.asm
+dir
+exec test
+exec test debug
+exec test step
+jasm test.asm
+jasm test.asm
+dir
+cat test.exe
+exit
+exec test
+jasm test.asm
+exec test
+exec test step
+jasm test.asm
+exec test
+jasm test.asm
+exec test
+exec test debug
+jasm test.asm
+jasm test.asm
+jasm test.asm
+jasm test.asm
+jasm test.asm
+jasm test.asm
+jasm test.asm
+jasm test.asm
+jasm test.asm
+jasm test.asm
+jasm test.asm
+jasm test.asm
+jasm test.asm
+jasm test.asm
+jasm test.asm
+jasm test.asm
+cat routines.tmp| grep 'imprime'| cut -d' ' -f2
+JASM TEST.ASM
+jasm test.asm
+exec test
+exec test step
+exec test step
+exec test
+exec test step
+jasm test.asm
+exec test
+exec test step
+exec test
+exec test step
+exec test
+exec test step
+exec test
+exec test
+exit
+exec test step
+exec test step
+jasm test.asm
+exec test
+jasm test.asm
+exec test
+exit

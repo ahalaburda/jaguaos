@@ -44,15 +44,15 @@ echo $( popChar ) > "${mpDir}/RA.reg";
 
 echo ${PC} > "${mpDir}/PC.reg";
 
-touchStatus ${"RA"};
-touchStatus ${"RB"};
-touchStatus ${"RC"};
-touchStatus ${"RD"};
-touchStatus ${"DR"};
-touchStatus ${"PC"};
-touchStatus ${"RA"};
-touchStatus ${"ZF"};
-touchStatus ${"SF"};
+touchStatus ${RA};
+touchStatus ${RB};
+touchStatus ${RC};
+touchStatus ${RD};
+touchStatus ${DR};
+touchStatus ${PC};
+touchStatus ${RA};
+touchStatus ${ZF};
+touchStatus ${SF};
 
 
 

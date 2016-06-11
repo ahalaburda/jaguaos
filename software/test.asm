@@ -1,17 +1,23 @@
 
-;- test.asm
+; test.asm
 ;
-;; Programa para prueba del compilador de jaguaOs
+; Programa para prueba del compilador de jaguaOs
 ;
 
 
 
-define primera "Hola\n\n"		; Define la variable "primera"
+define primera "Hola "		; Define la variable "primera"
 
-define segunda "\txXXXXXXXX"
+define segunda "UNI "
 
 
 
+
+
+sub imprime
+	mov RA, 1
+	int
+ret
 
 
 
@@ -23,19 +29,11 @@ org 020							; Define espacio de pila
 mov RA, 2						; Clear Screen Function
 int
 
-mov RA, 0
-mov RB, 1
-cmp RA, RB
+mov DR, offset primera
+call imprime
 
-mov RA, A
-mov RB, B
-mov RC, C
-mov RD, D
-mov DR, 0DD0
-
-pushr
-
-
-
+mov DR, offset segunda
+call imprime
 
 end
+

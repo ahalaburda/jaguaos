@@ -100,6 +100,13 @@ function testCommand
 
 
 			"ret")
+
+				# Define Code of function and parameters
+				defineASMParameters "popr";
+
+				# Increase the string with code				
+				prepareCode "${codeString}${codeFunction}"
+				
 				codeRoutine=`cat ${routine}.sub`;
 				echo ${#codeRoutine} >> ${routTempFile};
 				routine="";
@@ -225,12 +232,25 @@ function testCommand
 
 			"jump" | "jmp")
 
-				# Find Routine Address
+				# Find label Address
 				direction=`cat ${labelTempFile}| grep "${par1}"| cut -d" " -f2`;
 				direction=`printf '%04X' ${direction}`;
 
 				# Define Code of function 
 				defineASMParameters "jmp" direction;
+
+				# Increase the string with code
+				prepareCode "${codeString}${codeFunction}${direction}"
+				;;
+
+
+			"call")
+
+				# Find Routine Address
+				direction=`cat ${routTempFile}| grep "${par1}"| cut -d" " -f2`;
+				
+				# Define Code of function 
+				defineASMParameters "call" direction;
 
 				# Increase the string with code
 				prepareCode "${codeString}${codeFunction}${direction}"
