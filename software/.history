@@ -222,3 +222,6 @@ exec test
 jasm jmp.asm
 exec jmp
 exec jmp
+jasm jmp.asm
+jasm test.asm
+jasm jmp.asm

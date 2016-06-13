@@ -10,7 +10,7 @@
 ####################################################
 
 # Base Dir
-jaguaOsDir="/opt/jaguaOS";
+jaguaOsDir="/opt/jaguaOs";
 
 
 # Hardware

@@ -163,6 +163,27 @@ function testCommand
 				fi 
 
 
+				;;	
+
+			"jl")
+				#Rutina implementada por Leslie López
+				# Find Routine Address
+				direction=`cat ${labelTempFile}| grep "${par1}"| cut -d" " -f2`;
+				direction=`printf '%04X' ${direction}`;
+
+				signalFlag=$( readFlag "SF" );
+				zeroFlag=$( readFlag "ZF" );
+				
+				if [ ["$zeroFlag" != "0"] ||  ["$signalFlag" == "-1"]] ; then
+
+					# Define Code of function 
+					defineASMParameters "jmp" direction;
+
+					# Increase the string with code
+					prepareCode "${codeString}${codeFunction}${direction}"
+				fi 
+
+
 				;;				
 
 
