@@ -103,6 +103,16 @@ if [ -f ${mpDir}/status ]; then
 	rm ${mpDir}/status;
 fi
 
+# Clear Registers
+writeToRegister "RA" 0;
+writeToRegister "RB" 0;
+writeToRegister "RC" 0;
+writeToRegister "RD" 0;
+writeToRegister "DR" "0000";
+echo -n "0" > "${mpDir}/ZF.alu";
+echo -n "0" > "${mpDir}/SF.alu";
+echo -n "0" > "${mpDir}/ACC.alu";
+
 while true
 do 
 	fetch;

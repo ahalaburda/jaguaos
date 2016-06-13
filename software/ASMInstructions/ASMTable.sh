@@ -27,11 +27,25 @@ _jmp;		A9;		4;		Salta la ejecución para una posición de memoria
 
 _jl;        B3;     4;      Salta la ejecución para una posición de memoria, si la 
 
+_jnz;		AL;		4;		Salta para una posición si la última operación aritmética resultó diferente de cero
+
+_stpc;      AX;     4;      Store a Direction in the PC register
+
 _loop;		AA;		4;		Makes a loop to an Memory Address
 
 _nop;		AB;		0;		Makes nothing
 
 _cmp;		AC; 	4;		Compare two registers and stores results in ACC
+
+_push;		AD;		2;		Push data into Stack 
+
+_pop; 		AE;		2;		Pop data from Stack 
+
+_pushr;		AF;		0;		Push all registers in the Stack
+
+_popr;		B0;		0; 		Pop all registers from stack
+
+_call;		B1;		4;		Call sub routine
 
 .RA;		C1;				Register RA
 
