@@ -112,6 +112,23 @@ function testCommand
 				routine="";
 				;;
 
+			"jge")
+                # Javier Rios Selent
+                # Find Routine Address
+                direction=`cat ${labelTempFile}| grep "${par1}"| cut -d" " -f2`;
+                direction=`printf '%04X' ${direction}`;
+
+                zeroFlag=$( readFlag "ZF" );
+                signFlag=$( readFlag "SF");
+               
+                if [ "$zeroFlag" == "1" ] || [ "$signFlag" == "1" ]; then
+                    # Define Code of function
+                    defineASMParameters "jmp" direction;
+
+                    # Increase the string with code
+                    prepareCode "${codeString}${codeFunction}${direction}"
+                fi
+                ;;
 
 			"mov")
 				if [ "${par2}" == "offset" ] ; then

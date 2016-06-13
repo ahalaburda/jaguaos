@@ -29,6 +29,8 @@ _jl;        B3;     4;      Salta la ejecución para una posición de memoria, s
 
 _jnz;		AL;		4;		Salta para una posición si la última operación aritmética resultó diferente de cero
 
+_jge		B6;     4;		Salta si el mayor o igual
+
 _stpc;      AX;     4;      Store a Direction in the PC register
 
 _loop;		AA;		4;		Makes a loop to an Memory Address
