@@ -148,9 +148,9 @@ function testCommand
                 zeroFlag=$( readFlag "ZF" );
                 signFlag=$( readFlag "SF");
                
-                if [ "$zeroFlag" == "1" ] || [ "$signFlag" == "1" ]; then
+                if [ "$zeroFlag" == "1" ] || [ "$signFlag" == "0" ]; then
                     # Define Code of function
-                    defineASMParameters "jmp" direction;
+                    defineASMParameters "jge" direction;
 
                     # Increase the string with code
                     prepareCode "${codeString}${codeFunction}${direction}"
