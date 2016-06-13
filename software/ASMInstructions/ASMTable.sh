@@ -27,6 +27,8 @@ _jmp;		A9;		4;		Salta la ejecución para una posición de memoria
 
 _jl;        B3;     4;      Salta la ejecución para una posición de memoria, si la 
 
+_jle;		B5;		4;		Salta si es menor o igual, o salta si no es mas grande
+
 _jnz;		AL;		4;		Salta para una posición si la última operación aritmética resultó diferente de cero
 
 _jge		B6;     4;		Salta si el mayor o igual
