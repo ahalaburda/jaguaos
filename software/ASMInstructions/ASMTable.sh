@@ -47,7 +47,7 @@ _call;		B1;		4;		Call sub routine
 
 _jg;		B2;		4;		Salta para una posición si la última operación aritmética resultó mayor que cero
 
-_jl;        B3;     4;      Salta la ejecución para una posición de memoria, si la 
+_jl;        B3;     4;      Salta para una posición si la última operación aritmética resultó menor a cero
 
 _jz;		B4;		4;		Salta para una posición si la última operación aritmética resultó cero
 

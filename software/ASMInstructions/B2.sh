@@ -1,9 +1,11 @@
 #!/bin/bash 
 
-# B3.sh
+# B2.sh
 #
-# Jump the execution to the memory position specified
-
+# Salta para una posición si la última 
+# operación aritmética resultó mayor que cero
+#
+# @author	Yenny Vega Grahl
 # @date		June, 13 of 2016
 #
 ####################################################
@@ -22,3 +24,4 @@ position=${parameters:0:4};
 writeToRegister "PC" ${position}
 
 touchStatus "PC";
+
