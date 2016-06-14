@@ -222,13 +222,21 @@ function testCommand
 				direction=`cat ${labelTempFile}| grep "${par1}"| cut -d" " -f2`;
 				direction=`printf '%04X' ${direction}`;
 
-				signalFlag=$( readFlag "SF" );
+				signFlag=$( readFlag "SF" );
 				zeroFlag=$( readFlag "ZF" );
 				
-				if [ ["$zeroFlag" != "0"] ||  ["$signalFlag" == "-1"]] ; then
+				if [ "$zeroFlag" != "0" ] ; then
 
 					# Define Code of function 
-					defineASMParameters "jmp" direction;
+					defineASMParameters "jl" direction;
+
+					# Increase the string with code
+					prepareCode "${codeString}${codeFunction}${direction}"
+
+				elif [ "$signFlag" == "1" ] ; then
+
+					# Define Code of function 
+					defineASMParameters "jl" direction;
 
 					# Increase the string with code
 					prepareCode "${codeString}${codeFunction}${direction}"
