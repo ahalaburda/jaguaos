@@ -226,7 +226,7 @@ function testCommand
 
 				signalFlag=$( readFlag "SF" );
 				
-				if [["$zeroFlag" == "0"]] ; then
+				if [["$signalFlag" == "0"]] ; then
 
 					if [["$signalFlag" == "0"]] ; then
 
