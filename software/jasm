@@ -225,7 +225,8 @@ function testCommand
 				signFlag=$( readFlag "SF" );
 				zeroFlag=$( readFlag "ZF" );
 				
-				if [ "$zeroFlag" != "0" ] ; then
+				if [ "$zeroFlag" == "0" ] ; then
+					if [ "$signFlag" == "1" ] ; then
 
 					# Define Code of function 
 					defineASMParameters "jl" direction;
@@ -233,14 +234,9 @@ function testCommand
 					# Increase the string with code
 					prepareCode "${codeString}${codeFunction}${direction}"
 
-				elif [ "$signFlag" == "1" ] ; then
-
-					# Define Code of function 
-					defineASMParameters "jl" direction;
-
-					# Increase the string with code
-					prepareCode "${codeString}${codeFunction}${direction}"
+					fi 
 				fi 
+
 
 
 				;;				
