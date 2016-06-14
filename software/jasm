@@ -123,14 +123,14 @@ function testCommand
                
                 if [ "$zeroFlag" == "1" ]; then
                     # Define Code of function
-                    defineASMParameters "jmp" direction;
+                    defineASMParameters "jle" direction;
 
                     # Increase the string with code
                     prepareCode "${codeString}${codeFunction}${direction}"
 
-                elif [ "$signFlag" == "-1" ]; then
+                elif [ "$signFlag" == "1" ]; then
                     # Define Code of function
-                    defineASMParameters "jmp" direction;
+                    defineASMParameters "jle" direction;
 
                     # Increase the string with code
                     prepareCode "${codeString}${codeFunction}${direction}"
