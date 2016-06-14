@@ -25,13 +25,7 @@ _end;		A8;		0;		Terminate a program
 
 _jmp;		A9;		4;		Salta la ejecución para una posición de memoria
 
-_jl;        B3;     4;      Salta la ejecución para una posición de memoria, si la 
-
-_jle;		B5;		4;		Salta si es menor o igual, o salta si no es mas grande
-
 _jnz;		AL;		4;		Salta para una posición si la última operación aritmética resultó diferente de cero
-
-_jge		B6;     4;		Salta si el mayor o igual
 
 _stpc;      AX;     4;      Store a Direction in the PC register
 
@@ -50,6 +44,14 @@ _pushr;		AF;		0;		Push all registers in the Stack
 _popr;		B0;		0; 		Pop all registers from stack
 
 _call;		B1;		4;		Call sub routine
+
+_jg;		B2;		4;		Salta para una posición si la última operación aritmética resultó mayor que cero
+
+_jl;        B3;     4;      Salta la ejecución para una posición de memoria, si la 
+
+_jle;		B5;		4;		Salta si es menor o igual, o salta si no es mas grande
+
+_jge		B6;     4;		Salta si el mayor o igual
 
 .RA;		C1;				Register RA
 
