@@ -49,6 +49,8 @@ _jg;		B2;		4;		Salta para una posición si la última operación aritmética res
 
 _jl;        B3;     4;      Salta la ejecución para una posición de memoria, si la 
 
+_jz;		B4;		4;		Salta para una posición si la última operación aritmética resultó cero
+
 _jle;		B5;		4;		Salta si es menor o igual, o salta si no es mas grande
 
 _jge		B6;     4;		Salta si el mayor o igual
